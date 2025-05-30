@@ -1,0 +1,27 @@
+Spring Security:
+
+Ensures that access is only defined to people who have been allowed by the sysem for their desigated purpose by the administrator.
+
+
+Importance: Privacy, trust,  integrity, compliance.
+
+
+Role of Spring Security in the Spring eco-system.
+- Spring framework
+- Sprint boot
+- Spring data
+- Spring security: consists of
+        Authentication: Proving your identity.
+        Authorization: The tsks alloted to you and the definition of your access in the system.
+
+        It is a combination of 'tools' and 'frameworks' used for building Spring boot applications and using Spring security means protection of user data.
+
+
+KEY SECURITY PRINCIPLES ->
+1. Least Privilege
+2. Secure by Design
+3. Fail-safe defaults
+4. Secure communication
+5. Input validation
+6. Auditing and Logging
+7. Regular updates and Patch management.
