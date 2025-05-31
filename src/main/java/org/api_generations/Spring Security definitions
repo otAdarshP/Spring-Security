@@ -1,27 +1,31 @@
 Spring Security:
+Ensures that access is only defined to people who have been allowed by the system for their designated purpose by the administrator.
 
-Ensures that access is only defined to people who have been allowed by the sysem for their desigated purpose by the administrator.
-
-
-Importance: Privacy, trust,  integrity, compliance.
-
+Importance: Privacy, trust, integrity, compliance.
 
 Role of Spring Security in the Spring eco-system.
 - Spring framework
 - Sprint boot
 - Spring data
 - Spring security: consists of
-        Authentication: Proving your identity.
-        Authorization: The tsks alloted to you and the definition of your access in the system.
-
-        It is a combination of 'tools' and 'frameworks' used for building Spring boot applications and using Spring security means protection of user data.
-
+        + Authentication: Proving your identity.
+        + Authorization: The tasks for which access is allotted to you and the definition of your access in the system.
+  It is a combination of 'tools' and 'frameworks' used for building Spring boot applications and using Spring security means protection of user data.
 
 KEY SECURITY PRINCIPLES ->
-1. Least Privilege
-2. Secure by Design
-3. Fail-safe defaults
-4. Secure communication
-5. Input validation
-6. Auditing and Logging
+1. Least Privilege.
+2. Secure by Design.
+3. Fail-safe defaults.
+4. Secure communication.
+5. Input validation.
+6. Auditing and Logging.
 7. Regular updates and Patch management.
+
+* Working of Spring Security:
+    In between the 'Requests' and the 'Controllers' - there exist the "Filter Chain". These chains can consist of anything which are used for proper implementation of the Spring boot functionality we wish to execute, ut in this reference,
+    the "Filter Chains" consist of the Authentication Filter which is further broken down to the user's name and password which are called as the "AUTHENTICATION OBJECTS".
+    These 'objects' are given to the authentication manager for further processing where the Authentication Manager decides what action need to be performed with the objects.
+    He, the Authentication Manager, delegates this task to the Authentication Provider of authenticating the user (i.e., "LDABAuthenticationProvider / InMemoryAuthenticationProvider / DaoAuthenticationProvider"  + others are specific to Spring and their applicability depends on the way the data is being stored.).
+
+    The Authentication Provider uses : 1. PasswordEncoder - It helps by decoding the password of the login user for verification.
+                                       2. UserDetailsService - findByUsername() every detail of thee login-in user from the database.
